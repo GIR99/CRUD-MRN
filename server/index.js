@@ -81,4 +81,21 @@ app.put("/update",(req,res)=>{
     );    
 });
 
+
+app.delete("/delete/:id",(req,res)=>{
+    {/* VALORES QUE LLEGAN DE App.js que esta en el servidor cliente*/}
+    const id = req.params.id;
+    {/* CREAR SENTENCIA SQL PARA LA INSERCION DE LOS DATOS*/}
+    db.query('DELETE FROM empleados WHERE id=?',id, 
+    /* CREAR SENTENCIA SQL PARA ENCONTRAR ERRORES */
+    (err,result)=> {
+        if(err){
+            console.log(err);
+        }else{
+            res.send(result);
+        }
+    }
+    );    
+});
+
 app.listen(3001,()=> {console.log("CORRIENDO EN EL PUERTO 3001")})
