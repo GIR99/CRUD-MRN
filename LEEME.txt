@@ -1,0 +1,16 @@
+CRUD CREADO EN BASE A UN TUTORIAL DE YOUTUBE POR PARTE DE https://www.youtube.com/watch?v=U1u2jNYXmBw&list=LL&index=15&t=3699s
+
+UTILIZANDO NODE REACT MYSQL EXPREES NOX CORS 
+
+CREACION DE LA BD EN MYSQL 
+
+TABLA EMPLEADOS
+CREATE TABLE `empleados` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(100) DEFAULT NULL,
+  `edad` int DEFAULT '0',
+  `pais` varchar(100) DEFAULT NULL,
+  `cargo` varchar(100) DEFAULT NULL,
+  `anios` int DEFAULT '0',
+  PRIMARY KEY (`id`);
+
